@@ -6,9 +6,9 @@ variable "az_num" {
 }
 
 variable "namespace" {
-  type    = string
+  type = string
 }
 
 variable "vpc_cidr_block" {
-  type    = string
+  type = string
 }

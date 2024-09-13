@@ -3,7 +3,7 @@ data "aws_availability_zones" "available" {}
 data "aws_region" "current" {}
 
 locals {
-  region = data.aws_region.current.id
+  region         = data.aws_region.current.id
   vpc_cidr       = var.vpc_cidr
   num_of_subnets = min(length(data.aws_availability_zones.available.names), 3)
   azs            = slice(data.aws_availability_zones.available.names, 0, local.num_of_subnets)
@@ -41,4 +41,3 @@ module "vpc" {
   tags = local.common_tags
 
 }
-

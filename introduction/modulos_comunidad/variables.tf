@@ -8,5 +8,5 @@ variable "customer" {
   description = "Customer name"
   type        = string
   default     = "dinocloud"
-  
+
 }
